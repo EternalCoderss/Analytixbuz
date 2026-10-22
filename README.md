@@ -27,48 +27,41 @@ Analytixbuz is an end-to-end **Autonomous Data Science Platform** that transform
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Run in 2 Steps)
 
-### Prerequisites
-- Python 3.9+
-- pip
+### Option 1: Direct Local Run (Recommended for Judges)
 
-### Installation
+Datasets are already included in `data/`, so you can launch the interactive UI immediately:
 
 ```bash
-cd analytixbuz
+# 1. Clone & install
+git clone https://github.com/EternalCoderss/Analytixbuz.git
+cd Analytixbuz
 pip install -r requirements.txt
-```
 
-### Generate Demo Datasets
-
-```bash
-python data/generate_demo_datasets.py
-```
-
-### Run Streamlit Dashboard (Hackathon Demo)
-
-```bash
+# 2. Launch Dashboard (Browser will automatically pop open!)
 streamlit run src/ui/streamlit_app.py
 ```
 
-### Run FastAPI Backend
+> 🌐 **Browser UI will automatically open at:** `http://localhost:8501`  
+> In the sidebar, select any demo dataset (🏭 Manufacturing, 🛒 Retail, or 👤 Churn) and click **"Run Autonomous Pipeline"**!
 
-```bash
-uvicorn src.api.main:app --reload --port 8000
-```
+---
 
-### Run Tests
-
-```bash
-pytest tests/ -v
-```
-
-### Docker
+### Option 2: Run with Docker (1-Click)
 
 ```bash
 docker-compose up --build
 ```
+Open **`http://localhost:8501`** in your browser.
+
+---
+
+### Optional Commands
+
+- **Run FastAPI REST Backend**: `uvicorn src.api.main:app --reload --port 8000` (Docs at `http://localhost:8000/docs`)
+- **Run Full Pytest Suite**: `pytest tests/ -v`
+- **Regenerate Demo Data**: `python data/generate_demo_datasets.py`
 
 ---
 
